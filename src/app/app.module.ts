@@ -1,3 +1,5 @@
+import { RejoinSessionPage } from './../pages/rejoin-session/rejoin-session';
+import { CreerSessionPage } from './../pages/creer-session/creer-session';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -20,7 +22,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SessionsPage,
     NewsPage,
     HistoriquePage,
-    TabsPage
+    TabsPage,
+    CreerSessionPage,
+    RejoinSessionPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SessionsPage,
     NewsPage,
     HistoriquePage,
-    TabsPage
+    TabsPage,
+    CreerSessionPage,
+    RejoinSessionPage
   ],
   providers: [
     StatusBar,

@@ -1,7 +1,5 @@
-import { HistoriquePage } from './../pages/historique/historique';
-import { SessionsPage } from './../pages/sessions/sessions';
-import { MeteoPage } from './../pages/meteo/meteo';
-import { NewsPage } from './../pages/news/news';
+import { RejoinSessionPage } from './../pages/rejoin-session/rejoin-session';
+import { CreerSessionPage } from './../pages/creer-session/creer-session';
 import { Component,ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -27,10 +25,8 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'News', component: NewsPage },
-      { title: 'Meteo', component: MeteoPage },
-      {title: 'Sessions', component: SessionsPage},
-      {title:'Historique', component:HistoriquePage}
+      { title: 'Creer Session', component: CreerSessionPage },
+      { title: 'Rejoindre Session', component: RejoinSessionPage }
     ];
   }
 
