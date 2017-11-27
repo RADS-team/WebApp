@@ -4,8 +4,20 @@
       Météo plpop
     </ion-title>
   </ion-navbar>
+  <ion-searchbar (input)="getItems($event)"></ion-searchbar>
 </ion-header>
 
 <ion-content padding>
+    <ion-card>
+        
+          <ion-card-header>
+            Meteo
+          </ion-card-header>
+        
+          <ion-card-content>
+            <img src="http://www.icone-png.com/png/27/26659.png">
+          </ion-card-content>
+        
+        </ion-card>
 
 </ion-content>
