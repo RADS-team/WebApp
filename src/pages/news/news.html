@@ -3,11 +3,12 @@
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title>News</ion-title>
-  </ion-navbar>
+    <ion-title>News</ion-title>  <button ion-button item-end outline icon-end small color="primary" (click)="logout()">Logout</button>
+       </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+    <h1>Welcome {{username}}</h1>
   <ion-card>
     
       <ion-item>

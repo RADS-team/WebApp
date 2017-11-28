@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AuthPage } from '../auth/auth';
-import { NewsPage } from '../news/news';
+import { TabsPage } from '../tabs/tabs';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -15,7 +15,7 @@ export class HomePage {
          this.username = window.localStorage.getItem('username');
      }
      test():void{
-         this.nav.setRoot(NewsPage);
+         this.nav.setRoot(TabsPage);
          this.nav.popToRoot(); 
      }
      logout(): void {
