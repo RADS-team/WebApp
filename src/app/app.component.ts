@@ -5,6 +5,8 @@ import { Component,ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AuthPage } from '../pages/auth/auth';
+import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,7 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   
-  rootPage:any = TabsPage;
+  rootPage:any;
   pages: Array<{title: string, component: any}>;
   constructor(
     public platform: Platform,
@@ -36,9 +38,17 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-    });
+      this.checkPreviousAuthorization();
+        });
   }
-
+  checkPreviousAuthorization(): void { 
+    if((window.localStorage.getItem('username') === "undefined" || window.localStorage.getItem('username') === null) && 
+       (window.localStorage.getItem('password') === "undefined" || window.localStorage.getItem('password') === null)) {
+      this.rootPage = AuthPage;
+    } else {
+      this.rootPage = HomePage;
+    }
+  }
   openPage(page) {
     // close the menu when clicking a link from the menu
     this.menu.close();

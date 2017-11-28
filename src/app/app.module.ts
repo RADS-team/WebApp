@@ -14,6 +14,8 @@ import { HistoriquePage } from '../pages/historique/historique';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HomePage } from '../pages/home/home';
+import { AuthPage } from './../pages/auth/auth';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HistoriquePage,
     TabsPage,
     CreerSessionPage,
-    RejoinSessionPage
+    RejoinSessionPage,
+    HomePage,
+    AuthPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HistoriquePage,
     TabsPage,
     CreerSessionPage,
-    RejoinSessionPage
+    RejoinSessionPage,
+    HomePage,
+    AuthPage
   ],
   providers: [
     StatusBar,
