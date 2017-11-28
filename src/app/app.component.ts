@@ -6,7 +6,6 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthPage } from '../pages/auth/auth';
-import { HomePage } from '../pages/home/home';
 
 @Component({
   templateUrl: 'app.html'

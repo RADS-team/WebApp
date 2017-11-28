@@ -10,7 +10,7 @@ import { MeteoPage } from '../pages/meteo/meteo';
 import { SessionsPage } from '../pages/sessions/sessions';
 import { NewsPage } from '../pages/news/news';
 import { HistoriquePage } from '../pages/historique/historique';
-
+import { BLE } from '@ionic-native/ble';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -50,6 +50,7 @@ import { AuthPage } from './../pages/auth/auth';
   providers: [
     StatusBar,
     SplashScreen,
+    BLE,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
