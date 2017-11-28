@@ -1,7 +1,7 @@
-import { NewsPage } from './../news/news';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, } from '@angular/forms';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
  
 /**
  * Generated class for the AuthPage page.
@@ -33,7 +33,7 @@ export class AuthPage {
              window.localStorage.setItem('username', value.username);
              window.localStorage.setItem('password', value.password);
   
-             this.nav.push(NewsPage);
+             this.nav.push(TabsPage);
          }
      }   
 }
