@@ -46,7 +46,7 @@ export class MyApp {
        (window.localStorage.getItem('password') === "undefined" || window.localStorage.getItem('password') === null)) {
       this.rootPage = AuthPage;
     } else {
-      this.rootPage = HomePage;
+      this.rootPage = TabsPage;
     }
   }
   openPage(page) {
