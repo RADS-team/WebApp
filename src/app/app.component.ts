@@ -1,3 +1,4 @@
+import { HomePage } from './../pages/home/home';
 import { TabsPage } from './../pages/tabs/tabs';
 import { RejoinSessionPage } from './../pages/rejoin-session/rejoin-session';
 import { CreerSessionPage } from './../pages/creer-session/creer-session';
@@ -27,6 +28,7 @@ export class MyApp {
     this.pages = [
       { title: 'Creer Session', component: CreerSessionPage },
       { title: 'Rejoindre Session', component: RejoinSessionPage },
+      { title: 'Test', component: HomePage },
       { title: 'Retour accueil', component: TabsPage }
     ];
   }

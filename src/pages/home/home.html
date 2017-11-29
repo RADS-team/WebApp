@@ -1,12 +1,31 @@
 <ion-header>
-  <ion-navbar hideBackButton>
-    <ion-title>Home Page</ion-title>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>
+      BLE Scanner
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="scan()">
+        Scan
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
- 
-<ion-content padding>
-  <h1>Welcome {{username}}</h1>
-  <button ion-button full color="primary" style="margin-top: 20px;" (click)="logout()">Logout</button>
 
-  <button ion-button full color="primary" style="margin-top: 20px;" (click)="test()">News</button>
+<ion-content>
+   <ion-list> 
+    <button ion-item *ngFor="let device of devices">
+      <h2>{{ device.name || 'Unnamed' }}</h2>
+      <p>{{ device.id }}</p>
+      <p>RSSI: {{ device.rssi }}</p>
+    </button>  
+   </ion-list> 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{ statusMessage }}</p>
+  </ion-toolbar>
+</ion-footer>
