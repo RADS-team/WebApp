@@ -1,7 +1,8 @@
+import { BLE } from '@ionic-native/ble';
 import { Component, NgZone } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
-import { BLE } from '@ionic-native/ble';
+import { DetailPage } from '../detail/detail';
 
 @Component({
   selector: 'page-home',
@@ -57,6 +58,13 @@ export class HomePage {
     console.log(message);
     this.ngZone.run(() => {
       this.statusMessage = message;
+    });
+  }
+
+  deviceSelected(device) {
+    console.log(JSON.stringify(device) + ' selected');
+    this.navCtrl.push(DetailPage, {
+      device: device
     });
   }
 

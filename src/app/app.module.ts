@@ -1,3 +1,4 @@
+import { DetailPage } from './../pages/detail/detail';
 import { RejoinSessionPage } from './../pages/rejoin-session/rejoin-session';
 import { CreerSessionPage } from './../pages/creer-session/creer-session';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -28,7 +29,8 @@ import { AuthPage } from './../pages/auth/auth';
     CreerSessionPage,
     RejoinSessionPage,
     HomePage,
-    AuthPage
+    AuthPage,
+    DetailPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { AuthPage } from './../pages/auth/auth';
     CreerSessionPage,
     RejoinSessionPage,
     HomePage,
-    AuthPage
+    AuthPage,
+    DetailPage
   ],
   providers: [
     StatusBar,

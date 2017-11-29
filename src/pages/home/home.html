@@ -4,7 +4,7 @@
           <ion-icon name="menu"></ion-icon>
         </button>
     <ion-title>
-      BLE Scanner
+      BLE Connect
     </ion-title>
     <ion-buttons end>
       <button ion-button (click)="scan()">
@@ -16,7 +16,7 @@
 
 <ion-content>
    <ion-list> 
-    <button ion-item *ngFor="let device of devices">
+    <button ion-item *ngFor="let device of devices" (click)="deviceSelected(device)">
       <h2>{{ device.name || 'Unnamed' }}</h2>
       <p>{{ device.id }}</p>
       <p>RSSI: {{ device.rssi }}</p>
